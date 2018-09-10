@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.sharedemo"
+        version="0.0.1"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+    <!-- App Name -->
+    <name>Cordova Share Plugin Demo</name>
+    
+    <!-- App Description. This is only for Phonegap reference-->
+    <description>
+        Demo of Cordova share plugin. Android Build created on Phonegap.
+    </description>
+    
+    <!-- Author Details -->
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    
+    <!-- Default Page to load when app is opened -->
+    <content src="index.html" />
+    
+    <!-- Installed Cordova Plugins -->
+    <plugin name="cordova-plugin-whitelist" spec="1" source="npm" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="5.4.1" source="npm" />
+    
+    <!-- Whitelist all links -->
+    <access origin="*" />
+    
+    <!-- Whitelist HTTP, HTTPS trafic, Telephone, SMS, Email & Geo links -->
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    
+    <!-- Whitelist Playstore for android -->
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+</widget>

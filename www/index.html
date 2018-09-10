@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!--Add this to avoid whitelist errors -->
+        <meta http-equiv="Content-Security-Policy" 
+            default-src 'self';
+            connect-src *;
+            style-src 'self' data: chrome-extension-resource: 'unsafe-inline';
+            img-src 'self' data: chrome-extension-resource:;
+            frame-src 'self' data: chrome-extension-resource:;
+            font-src 'self' data: chrome-extension-resource:;
+            media-src *;>
+            
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        
+        <title>Cordova Share Plugin Demo</title>
+        
+    </head>
+    
+    <body onload="AddDeviceReady()">
+    
+        <div>
+            <h1>Cordova Share Plugin Demo</h1>
+            <p>Plugin Link : <a href="https://www.npmjs.com/package/cordova-plugin-x-socialsharing" target="_blank" style="text-decoration: none;">https://www.npmjs.com/package/cordova-plugin-x-socialsharing</a></p>
+        </div>
+
+        <!-- Share Buttons -->
+        <div>
+            <button onClick="ShareOnFB()">Facebook</button>
+            <button onClick="ShareOnTwitter()">Twitter</button>
+            <button onClick="ShareOnWhatsApp()">WhatsApp</button>
+            <button onClick="ShareOnOtherApps()">Other Share</button>
+        </div>
+
+        <!-- Including Cordova JS (This file will not be there in the project. This will be added by Phonegap automatically). Ignore JS errors in preview browser -->
+        <script type="text/javascript" src="cordova.js"></script>
+        
+        <!-- Including Share JS -->
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
